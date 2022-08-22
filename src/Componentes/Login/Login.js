@@ -1,5 +1,6 @@
 import styles from './login.module.css'
 import Logo from '../imagenes/logo-Ripley.png'
+import { Link } from 'react-router-dom'
 
 
 
@@ -20,9 +21,9 @@ const Login = () => {
 						<input className={styles.email2} name='password' type='password' placeholder="Ingresa tu contraseña"></input>
 					</div>
 					<div className={styles.login_input }>
-					
+					<Link to="/products">
                        <button className={styles.btn_login_btn} type="submit" id="login"  >Ingresar</button>
-				 	
+					</Link>
 					</div>
 					<small></small>
 				</form>
