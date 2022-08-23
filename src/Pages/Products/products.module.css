@@ -1,0 +1,12 @@
+.btnAddProduct {
+    background-color: #EA3E91;
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 7px;
+    margin-top: 50px;
+    width: 210px;
+    border-color: #EA3E91;
+    position: relative;
+    left: 80%;
+}

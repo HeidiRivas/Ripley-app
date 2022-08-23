@@ -1,16 +1,12 @@
 import styles from './login.module.css'
-import Logo from '../imagenes/logo-Ripley.png'
+import Logo from '../../Componentes/imagenes/logo-Ripley.png'
 import { Link } from 'react-router-dom'
-
-
-
-
 
 const Login = () => {
 	  
 	return (
-		<main className={styles.login_view}>
-			<section >
+		<main>
+			<section  className={styles.login_view}>
 				<section className={styles.sct}>
 				<form className={styles.login_form}>
 				<img src={Logo} alt='logomain' className={styles.logo} />

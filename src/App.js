@@ -1,8 +1,7 @@
-import Login from './Componentes/Login/Login.js'
-import './App.css';
+import Login from './Pages/Login/Login.js'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Products from './Componentes/Products/Products.js';
-import NewProduct from './Componentes/NewProduct/NewProduct.js';
+import Products from './Pages/Products/Products.js';
+import NewProduct from './Pages/NewProduct/NewProduct.js';
 
 
 
@@ -19,7 +18,7 @@ function App() {
   );
 }
 
-export default App;
+export default App
 
 
 
