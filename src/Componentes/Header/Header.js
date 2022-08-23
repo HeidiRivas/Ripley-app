@@ -1,6 +1,9 @@
 import header from '../../Componentes/Header/header.module.css'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import React from 'react'
+
+import { faArrowLeft, faArrowRight, faArrowRightArrowLeft, faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Header = () => {
   return (
@@ -9,7 +12,7 @@ const Header = () => {
           <div className={header.containerRipleyAndUser}>
             <h1 className={header.textStyle}>RipleyTECH_</h1>
             <h3 className={header.textStyle}>USUARIO</h3>
-            <FontAwesomeIcon icon={"fa-regular fa-arrow-right-from-bracket"} />
+            <FontAwesomeIcon icon={faArrowRightFromBracket} />
           </div>
         </header>
     </div>
