@@ -1,9 +1,62 @@
-.container{
-    display:grid;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Open+Sans&display=swap');
+
+.container {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
-.categoria{
+.categoria {
     width: 20px;
+}
+
+.containerTitlePage {
+    justify-content: center;
+    /* outline: 2px solid red; */
+    text-align: center;
+}
+
+.TilteStylePage {
+    font-size: 35px;
+    color: #472B8F;
+}
+
+
+
+.containerTitleAndInput {
+    margin: 50px;
+}
+
+.containerAllItems {
+    /* outline: 2px solid red; */
+    align-items: center;
+    margin-left: 70px;
+}
+
+.TitleStyle {
+    color: #472B8F;
+}
+
+.descriptionStyle {
+    font-family: 'Open Sans', sans-serif;
+    color: #472B8F;
+}
+
+.inputcampos {
+    background-color: #DDDCDC;
+    border: 0;
+    border-radius: 3px;
+}
+
+.btnAddProduct {
+    background-color: #EA3E91;
+    color: white;
+    font-size: 20px;
+    padding: 5px 5px;
+    border-radius: 7px;
+    margin: 30px;
+    width: 210px;
+    border-color: #EA3E91;
+    position: relative;
+    left: 80%;
 }
