@@ -1,9 +1,6 @@
 
 
 .login_form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-style: groove;
     width: 200px;
     height:400px;
