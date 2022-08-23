@@ -1,0 +1,22 @@
+.backgroundColor {
+    background-color: #472B8F;
+}
+
+.textStyle {
+    color: white;
+}
+
+.containerRipleyAndUser {
+    margin-left: 20px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.iconlogout {
+    width: auto;
+    height: 8vh;
+    justify-content: right;
+    margin: 5px;
+}
