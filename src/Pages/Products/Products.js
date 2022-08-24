@@ -10,7 +10,10 @@ const Products = () => {
       <div>
         <Link to="/newproduct">
           <button className={styles.btnAddProduct}>Agregar Producto</button>
-        </Link>
+        </Link> 
+        <Link to="/bulkProducts">
+          <button className={styles.btnAddProduct}>Carga Masiva de Productos</button>
+        </Link>          
         <h1>Product</h1>
       </div>
     </main>
