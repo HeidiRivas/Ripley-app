@@ -1,10 +1,14 @@
 import React,{useState} from 'react'
 import Header from '../../Componentes/Header/Header';
 import styles from './newProduct.module.css'
+import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
 
 
 
 const NewProduct = () => {
+
   const campos = [{ "nombre": "categoria", "descripcion": "A que tipo de objeto pertence el artículo" },
   { "nombre": 'SKU_seller', "descripcion": "Número único que identifica su producto" },
   { "nombre": 'título', "descripcion": "Nombre del producto" },
@@ -43,6 +47,14 @@ const NewProduct = () => {
   return (
     <main>
       <Header />
+       <section className={styles.containerTitlePage}>
+        <Link to="/products">
+        <FontAwesomeIcon icon={faArrowLeftLong} className={styles.btnBack}/>
+          {/* <button className={styles.btnBack}>patras</button> */}
+        </Link>
+          <h1 className={styles.TilteStylePage}>¡Añade tu nuevo producto!</h1>
+          <p className={styles.descriptionStylePage}>Completa todos los campos</p>
+        </section>
       <div>
         <h1>NewProduct</h1>
         <form >
@@ -61,11 +73,12 @@ const NewProduct = () => {
               </div>
             ))}
 
-            <button type="submit" >Cargar</button>
+            <button type="submit" className={styles.btnAddProduct}>Cargar</button>
           </section>
         </form>
 
       </div>
+
 
     </main>
 

@@ -1,9 +1,77 @@
-.container{
-    display:grid;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Open+Sans&display=swap');
+
+.container {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
-.categoria{
+.btnBack {
+    position: relative;
+    right: 42%;
+    margin-top: 30px;
+    font-size: 30px;
+    color: #EA3E91;
+    margin-bottom: -30px;
+}
+
+.categoria {
     width: 20px;
+}
+
+.containerTitlePage {
+    justify-content: center;
+    /* outline: 2px solid red; */
+    text-align: center;
+}
+
+.TilteStylePage {
+    font-size: 45px;
+    color: #9B41FF;
+    margin-bottom: -10px;
+}
+
+.descriptionStylePage {
+    font-family: 'Open Sans', sans-serif;
+    color: #EA3E91;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+.containerAllItems {
+    /* outline: 2px solid red; */
+    align-items: center;
+    margin-left: 100px;
+}
+
+.TitleStyle {
+    color: #545454;
+    margin-bottom: -7px;
+}
+
+.descriptionStyle {
+    color: #545454;
+    margin-bottom: 3px;
+}
+
+.inputcampos {
+    background-color: #DDDCDC;
+    border: 0;
+    border-radius: 3px;
+    width: 260px;
+    height: 25px;
+}
+
+.btnAddProduct {
+    background-color: #EA3E91;
+    color: white;
+    font-size: 20px;
+    padding: 5px 5px;
+    border-radius: 7px;
+    margin: 30px;
+    width: 210px;
+    border-color: #EA3E91;
+    position: relative;
+    left: 80%;
 }

@@ -1,6 +1,9 @@
 import header from '../../Componentes/Header/header.module.css'
-import IconLogOut from '../../Componentes/imagenes/IconLogOut.png'
+
 import React from 'react'
+
+import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Header = () => {
   return (
@@ -9,7 +12,7 @@ const Header = () => {
           <div className={header.containerRipleyAndUser}>
             <h1 className={header.textStyle}>RipleyTECH_</h1>
             <h3 className={header.textStyle}>USUARIO</h3>
-            <img src={IconLogOut} className={header.iconlogout}/>
+            <FontAwesomeIcon icon={faArrowRightFromBracket} className={header.iconStyle}/>
           </div>
         </header>
     </div>

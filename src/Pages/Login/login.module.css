@@ -1,16 +1,53 @@
-.login_form {
-    justify-content: center;
-    border-style: groove;
-    width: 200px;
-    height: 400px;
-    outline: 2px solid red;
+.containerImageandForm {
+    display: flex;
 }
 
-img {
+.container {
+    margin-top: 50px;
+    position: absolute;
+    left: 50%;
+    background-color: #e3e3e3;
+    border-radius: 10px;
+}
+
+.containerFormLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15%;
+}
+
+.Bienvenido {
+    width: auto;
+    height: auto;
+}
+
+.TextBox {
+    background-color: #ffffff;
+    border: 0;
+    border-radius: 3px;
     width: 300px;
-    height: 200px;
+    height: 30px;
+    margin: 15px;
 }
 
-.login_view {
-    outline: 2px solid red;
+.logo {
+    width: auto;
+    height: 12vh;
+    margin-bottom: 10px;
+}
+
+.btnAddProduct {
+    background-color: #EA3E91;
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 7px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 130px;
+    border-color: #EA3E91;
+    position: relative;
+    left: 70%;
 }
