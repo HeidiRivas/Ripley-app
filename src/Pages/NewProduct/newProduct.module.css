@@ -17,11 +17,16 @@
 }
 
 .TilteStylePage {
-    font-size: 35px;
+    font-size: 45px;
     color: #472B8F;
 }
 
-
+.descriptionStylePage {
+    font-family: 'Open Sans', sans-serif;
+    color: #472B8F;
+    font-size: 25px;
+    font-weight: bold;
+}
 
 .containerTitleAndInput {
     margin: 50px;
