@@ -1,6 +1,9 @@
 import React from 'react'
 import Header from '../../Componentes/Header/Header';
 import styles from './newProduct.module.css'
+import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
 
 
 const NewProduct = () => {
@@ -20,16 +23,18 @@ const NewProduct = () => {
   return (
     <main>
       <Header />
-      <div>
         <section className={styles.containerTitlePage}>
-        <h1 className={styles.TilteStylePage}>¡Añade tu nuevo producto!</h1>
-        <p className={styles.descriptionStylePage}>No olvides dejar campos vacíos</p>
+        <Link to="/products">
+        <FontAwesomeIcon icon={faArrowLeftLong} className={styles.btnBack}/>
+          {/* <button className={styles.btnBack}>patras</button> */}
+        </Link>
+          <h1 className={styles.TilteStylePage}>¡Añade tu nuevo producto!</h1>
+          <p className={styles.descriptionStylePage}>Completa todos los campos</p>
         </section>
         <section className={styles.container}>
           {campos.map((item) => (
             <div className={styles.containerAllItems}>
               <div className={item.nombre}>
-                <section className={styles.containerTitleAndInput}>
                   <h2 className={styles.TitleStyle}>{item.nombre}</h2>
                   <p className={styles.descriptionStyle}>{item.descripcion}</p>
                   <input
@@ -37,13 +42,11 @@ const NewProduct = () => {
                   name={item}
                   type='text'
                   ></input>
-                </section>
               </div>
             </div>
           ))}
         </section>
         <button className={styles.btnAddProduct}>Siguiente</button>
-      </div>
     </main>
   );
 };

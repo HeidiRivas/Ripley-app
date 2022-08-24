@@ -19,7 +19,8 @@
 }
 
 .Bienvenido {
-    width: 27vw;
+    width: auto;
+    height: auto;
 }
 
 .TextBox {
@@ -32,8 +33,9 @@
 }
 
 .logo {
-    width: 15vw;
-    margin-bottom: 15px;
+    width: auto;
+    height: 12vh;
+    margin-bottom: 10px;
 }
 
 .btnAddProduct {

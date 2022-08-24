@@ -7,15 +7,15 @@ const Products = () => {
   return (
     <main>
       <Header />
-      <div>
-        <Link to="/newproduct">
-          <button className={styles.btnAddProduct}>Agregar Producto</button>
-        </Link> 
+      <div className={styles.containerbtn}>
         <Link to="/bulkProducts">
           <button className={styles.btnAddProduct}>Carga Masiva de Productos</button>
-        </Link>          
+        </Link> 
+        <Link to="/newproduct">
+          <button className={styles.btnAddProduct}>Agregar Producto</button>
+        </Link>  
+      </div>        
         <h1>Product</h1>
-      </div>
     </main>
   );
 };

@@ -14,9 +14,8 @@
     flex-direction: row;
 }
 
-.iconlogout {
-    width: auto;
-    height: 8vh;
-    justify-content: right;
-    margin: 5px;
+.iconStyle {
+    font-size: 40px;
+    color: white;
+    margin-top: 20px;
 }

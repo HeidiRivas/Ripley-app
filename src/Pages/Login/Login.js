@@ -17,7 +17,7 @@ const Login = () => {
 				<section className={styles.containerFormLogin}>
 					<img src={Logo} alt='logomain' className={styles.logo} />
 					<input className={styles.TextBox} name='email' type="email" placeholder="Ingresa tu correo"></input>
-					<input className={styles.TextBox} name='password' type="email" placeholder="Ingresa tu contraseña"></input>
+					<input className={styles.TextBox} name='password' type="password" placeholder="Ingresa tu contraseña"></input>
 					<Link to="/products">
                        <button className={styles.btnAddProduct} type="submit" id="login">Ingresar</button>
 					</Link>
