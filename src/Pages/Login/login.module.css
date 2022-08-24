@@ -1,16 +1,38 @@
-.login_form {
+.login_input {
     justify-content: center;
-    border-style: groove;
-    width: 200px;
-    height: 400px;
-    outline: 2px solid red;
+    margin-left: 60%;
+    margin-top: -20%;
+    /* outline: 2px solid red; */
 }
 
-img {
-    width: 300px;
-    height: 200px;
+.login__input {
+    justify-content: center;
+    margin-left: 60%;
+    margin-top: -5%;
 }
 
-.login_view {
-    outline: 2px solid red;
+.Bienvenido {
+    display: flex;
+    margin-top: -35%;
+}
+
+.logo {
+    display: flex;
+    margin-left: 46%;
+    margin-bottom: -5%;
+}
+
+.btn_login_btn {
+    background-color: #EA3E91;
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 7px;
+    margin-top: 50px;
+    width: 180px;
+    border-color: #EA3E91;
+    position: relative;
+    margin-top: 65%;
+    margin-left: -1%;
+
 }
