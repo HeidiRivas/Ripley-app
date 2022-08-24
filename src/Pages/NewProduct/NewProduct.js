@@ -4,7 +4,7 @@ import styles from './newProduct.module.css'
 
 
 const NewProduct = () => {
-  const campos = [{"nombre": "Categoria","descripcion": "A que tipo de objeto pertence el artículo"},
+  const campos = [{"nombre": "Categoría","descripcion": "A que tipo de objeto pertence el artículo"},
                   {"nombre": 'SKU_seller',"descripcion": "Número único que identifica su producto"} , 
                   {"nombre":  'Título',"descripcion": "Nombre del producto"} ,
                   {"nombre":  'Descripción',"descripcion": "Explique detalladamente las características del producto"}, 
@@ -23,7 +23,7 @@ const NewProduct = () => {
       <div>
         <section className={styles.containerTitlePage}>
         <h1 className={styles.TilteStylePage}>¡Añade tu nuevo producto!</h1>
-        <p className={styles.descriptionStyle}>Rellena el siguiente formulario con los datos del producto para obtener un excel con el registro de lo que hayas rellenado.</p>
+        <p className={styles.descriptionStylePage}>No olvides dejar campos vacíos</p>
         </section>
         <section className={styles.container}>
           {campos.map((item) => (
