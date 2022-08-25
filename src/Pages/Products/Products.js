@@ -11,6 +11,7 @@ export const Products = () => {
   const handleClose = () => setOpen(false);
   return (
     <main>
+      <div></div>
       <Header />
       <div className={styles.containerbtn}>
         <Link to="/bulkProducts">
