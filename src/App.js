@@ -5,10 +5,12 @@ import NewProduct from './Pages/NewProduct/NewProduct.js';
 import React from 'react';
 import { BulkPoducts } from 'Pages/BulkProduct/bulkProduct.js';
 import 'rsuite/dist/rsuite.min.css';
+import {ContextProvider} from './Componentes/Context/Context.js'
 
 
 function App() {
   return (
+    <ContextProvider>
 <BrowserRouter>
 <Routes>
   <Route path='/' element={<Login />}></Route>
@@ -16,8 +18,8 @@ function App() {
   <Route path='/newproduct' element={<NewProduct />}></Route>  
   <Route path='/bulkProducts' element={<BulkPoducts/>}></Route>
 </Routes>
-
 </BrowserRouter>
+</ContextProvider>
   );
 }
 
