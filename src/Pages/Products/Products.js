@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const Products = () => {
   return (
     <main>
+      <div></div>
       <Header />
       <div className={styles.containerbtn}>
         <Link to="/bulkProducts">
