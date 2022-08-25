@@ -22,8 +22,8 @@ export function TableProduct({ data }) {
         }}
       >
         <Column width={60} align="center" fixed>
-          <HeaderCell>Id</HeaderCell>
-          <Cell dataKey="id" />
+          <HeaderCell>SKU</HeaderCell>
+          <Cell dataKey="SKU_seller" />
         </Column>
 
         <Column  resizable width={150}>
@@ -32,8 +32,8 @@ export function TableProduct({ data }) {
         </Column>
 
         <Column width={150}>
-          <HeaderCell>Color</HeaderCell>
-          <Cell dataKey="color" />
+          <HeaderCell>Marca Producto.</HeaderCell>
+          <Cell dataKey="marca" />
         </Column>
 
         <Column width={100}>
