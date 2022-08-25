@@ -4,7 +4,7 @@ import Products from './Pages/Products/Products.js';
 import NewProduct from './Pages/NewProduct/NewProduct.js';
 import React from 'react';
 import { BulkPoducts } from 'Pages/BulkProduct/bulkProduct.js';
-
+import 'rsuite/dist/rsuite.min.css';
 
 
 function App() {
