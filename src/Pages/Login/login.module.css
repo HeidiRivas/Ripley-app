@@ -6,8 +6,19 @@
     margin-top: 50px;
     position: absolute;
     left: 50%;
-    background-color: #e3e3e3;
+    background-color: #472b8f;
     border-radius: 10px;
+}
+
+.logoripleytech {
+    width: auto;
+    height: 90px;
+}
+
+.textStyle {
+    color: white;
+    margin-right: 10px;
+    font-size: 30px;
 }
 
 .containerFormLogin {
@@ -19,7 +30,7 @@
 }
 
 .Bienvenido {
-    width: auto;
+    width: 461px;
     height: auto;
 }
 
