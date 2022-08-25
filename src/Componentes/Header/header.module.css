@@ -4,7 +4,18 @@
 
 .textStyle {
     color: white;
+    margin-right: 120px;
 }
+
+.textStyleUser {
+    color: white;
+    margin-left: 40px;
+    /* outline: 2px solid red; */
+    margin-bottom: 37px;
+    margin-left: 60%;
+    margin-top: 2%;
+}
+
 
 .containerRipleyAndUser {
     margin-left: 20px;
@@ -18,4 +29,9 @@
     font-size: 40px;
     color: white;
     margin-top: 20px;
+}
+
+.logoripleytech {
+    width: auto;
+    height: 90px;
 }
