@@ -2,11 +2,13 @@ import React from 'react'
 import Header from '../../Componentes/Header/Header'
 import styles from './products.module.css'
 import { Link } from 'react-router-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faDropBox } from '@fortawesome/free-solid-svg-icons'
+import { Button, Modal } from 'rsuite';
 
 
-const Products = () => {
+export const Products = () => {
+  const [open, setOpen] = React.useState(true);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   return (
     <main>
       <Header />
@@ -17,12 +19,21 @@ const Products = () => {
         <Link to="/newproduct">
           <button className={styles.btnAddProduct}>Agregar Producto</button>
         </Link>  
-      </div>  
-      <section className={styles.noProducts}>
-      <h1 className={styles.textnoProducts}>No hay productos registrados</h1>
-      {/* <FontAwesomeIcon icon={faDropBox} /> */}
-      </section>      
-        
+      </div>        
+        <h1>Product</h1>
+        <Modal open={open} onClose={handleClose}>
+    <Modal.Header>
+      <Modal.Title>¡Bienvenidos a Marketplace de Ripley!</Modal.Title>
+    </Modal.Header>
+    <Modal.Body>
+      <div>Acá podrás agregar nuevos poductos de manera individual y masiva</div>
+    </Modal.Body>
+    <Modal.Footer>
+      <Button onClick={handleClose} appearance="primary">
+        Ok
+      </Button>
+    </Modal.Footer>
+  </Modal>
     </main>
   );
 };
