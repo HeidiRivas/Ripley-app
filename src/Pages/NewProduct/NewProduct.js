@@ -94,6 +94,7 @@ const NewProduct = () => {
     },
     {
       nombre: "marca",
+
       mostrar: "Marca Producto*",
       descripcion: "Nombre de la marca de su producto",
       obligatorio: true,
@@ -102,7 +103,7 @@ const NewProduct = () => {
     {
       nombre: "color",
       mostrar: "Color Producto*",
-      descripcion: "Indique el color.",
+      descripcion: "Indique el color",
       obligatorio: true,
       tipo: "input",
     },
