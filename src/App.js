@@ -6,11 +6,13 @@ import React from 'react';
 import { BulkPoducts } from 'Pages/BulkProduct/bulkProduct.js';
 import { TablePage } from 'Pages/ProductTable/pageTable.js';
 import 'rsuite/dist/rsuite.min.css';
+import {ContextProvider} from './Componentes/Context/Context.js'
 
 
 
 function App() {
   return (
+    <ContextProvider>
 <BrowserRouter>
 <Routes>
   <Route path='/' element={<Login />}></Route>
@@ -20,8 +22,8 @@ function App() {
   <Route path='/pageTable' element={<TablePage/>}></Route>
   
 </Routes>
-
 </BrowserRouter>
+</ContextProvider>
   );
 }
 

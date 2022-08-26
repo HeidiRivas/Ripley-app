@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+
+import React, { useState, useContext } from "react";
+import {DatosContext} from '../../Componentes/Context/Context.js'
 import Header from "../../Componentes/Header/Header";
 import styles from "./newProduct.module.css";
 import { Link } from "react-router-dom";
@@ -8,6 +10,8 @@ import { Stars } from "Componentes/Stars/Stars";
 import { TableProduct } from "Componentes/TableProduct/TableProduct";
 
 const NewProduct = () => {
+
+
   const valorInicial = {
     categoria: "",
     SKU_seller: "",
@@ -22,6 +26,8 @@ const NewProduct = () => {
     tabla_de_tallas: "",
     genero: "",
   };
+
+  const Context = useContext(DatosContext)
   const [stars, setStars] = useState(0);
   const [datos, setDatos] = useState(valorInicial);
   const [grupoProductos, setGrupoProductos] = useState([]);
@@ -39,131 +45,170 @@ const NewProduct = () => {
   const campos = [
     {
       nombre: "categoria",
-      mostrar: "Categoría",
-      descripcion: "A que tipo de objeto pertence el artículo.",
+      mostrar: "Categoría*",
+      descripcion: "A que tipo de objeto pertence el artículo",
       obligatorio: true,
       tipo: "input",
     },
     {
       nombre: "SKU_seller",
-      mostrar: "SKU Producto",
-      descripcion: "Número único que identifica su producto.",
+      mostrar: "SKU Producto*",
+      descripcion: "Número único que identifica su producto",
       obligatorio: true,
       tipo: "input",
     },
     {
       nombre: "título",
-      mostrar: "Nombre Producto",
-      descripcion: "Nombre del producto.",
+      mostrar: "Nombre Producto*",
+      descripcion: "Nombre del producto",
       obligatorio: true,
       tipo: "input",
     },
     {
       nombre: "descripcion",
-      mostrar: "Descripción",
-      descripcion: "Explique detalladamente las características del producto.",
+      mostrar: "Descripción*",
+      descripcion: "Explique detalladamente las características del producto",
       obligatorio: true,
       tipo: "area",
     },
     {
       nombre: "imagen1",
-      mostrar: "Imagen Principal",
-      descripcion: "Agregue imagen de buena calidad.",
+      mostrar: "Imagen Principal*",
+      descripcion: "Agregue imagen de buena calidad",
       obligatorio: true,
       tipo: "file",
     },
     {
       nombre: "imagen_Miniatura",
-      mostrar: "Imagen Detalle",
-      descripcion: "Agregue imagen de buena calidad.",
+      mostrar: "Imagen Detalle*",
+      descripcion: "Agregue imagen de buena calidad",
       obligatorio: true,
       tipo: "file",
     },
     {
       nombre: "variant_id",
-      mostrar: "ID",
-      descripcion:"Número que identifica la variable de su producto, de existir.",
+      mostrar: "ID*",
+      descripcion:"Número que identifica la variable de su producto, de existir",
       obligatorio: true,
       tipo: "input",
     },
     {
       nombre: "marca",
-      mostrar: "Marca Producto",
-      descripcion: "Nombre de la marca de su producto.",
+
+      mostrar: "Marca Producto*",
+      descripcion: "Nombre de la marca de su producto",
       obligatorio: true,
       tipo: "input",
     },
     {
       nombre: "color",
-      mostrar: "Color Producto",
-      descripcion: "Indique el color.",
+      mostrar: "Color Producto*",
+      descripcion: "Indique el color",
       obligatorio: true,
       tipo: "input",
     },
     {
       nombre: "talla",
-      mostrar: "Talla Producto",
-      descripcion: "Agregue talla disponible.",
+      mostrar: "Talla Producto*",
+      descripcion: "Agregue talla disponible",
       obligatorio: true,
       tipo: "input",
     },
     {
       nombre: "tabla_de_tallas",
-      mostrar: "Guía de Talla",
-      descripcion: "Ingrese tabla de tallas.",
+      mostrar: "Guía de Talla*",
+      descripcion: "Ingrese tabla de tallas",
       obligatorio: true,
       tipo: "file",
     },
     {
       nombre: "genero",
-      mostrar: "Género",
-      descripcion: "Agregue imagen de buena calidad.",
+      mostrar: "Género*",
+      descripcion: "",
       obligatorio: true,
       tipo: "input",
     },    
     {
       nombre: "Imagen-2",
       mostrar: "Imagen 2",
-      descripcion: "Agregue otra imagen.",
+      descripcion: "Agregue otra imagen",
       obligatorio: false,
       tipo: "file",
     },
     {
       nombre: "Imagen-3",
       mostrar: "Imagen 3",
-      descripcion: "Agregue otra imagen.",
+      descripcion: "Agregue otra imagen",
       obligatorio: false,
       tipo: "file",
     },
     {
       nombre: "medida-alto",
       mostrar: "Medidas: Alto (cm)",
-      descripcion: "Agregue las medidas del producto.",
+      descripcion: "Agregue las medidas del producto",
       obligatorio: false,
       tipo: "input",
     },
     {
       nombre: "medida-Ancho",
       mostrar: "Medidas: Ancho (cm)",
-      descripcion: "Agregue las medidas del producto.",
+      descripcion: "Agregue las medidas del producto",
       obligatorio: false,
       tipo: "input",
     },
     {
       nombre: "medida-Largo",
       mostrar: "Medidas: Largo (cm)",
-      descripcion: "Agregue las medidas del producto.",
+      descripcion: "Agregue las medidas del producto",
       obligatorio: false,
       tipo: "input",
     },
     {
       nombre: "Peso-producto",
       mostrar: "Peso del Producto (kg)",
-      descripcion: "Ingrese el peso del producto.",
+      descripcion: "Ingrese el peso del producto",
       obligatorio: false,
       tipo: "input",
     },
   ];
+
+  const handleSendProduct = ()=> {
+    let isValid = true;
+    let error = "";
+    for (let i = 0; i < Object.keys(datos).length; i++) {
+      let element = Object.keys(datos)[i];
+      let isRequired = campos.find((x) => x.nombre === element);
+      if (isRequired.obligatorio) {
+        if (!datos[element]) {
+          isValid = false;
+          error = element;
+          break;
+        }
+      }
+    }
+
+    if (isValid) {
+      const productoCapturado = {
+        ...datos,
+        id: grupoProductos.length + 1,
+        stars: stars
+      }
+
+      // Aca ejecutar la funcion del context que guardara a productoCapturado en el context
+      //agregarProducto(productoCapturado)
+      Context.agregar(productoCapturado)
+      setGrupoProductos([
+        ...grupoProductos,
+        productoCapturado
+      ]);
+      setDatos(valorInicial);
+      setStars(0);
+    }else{
+      alert('El campo ' + error + " es obligatorio");
+    }
+
+
+  }
 
   const handleInputChange = (event) => {
     let newData = {
@@ -185,18 +230,29 @@ const NewProduct = () => {
           <FontAwesomeIcon icon={faArrowLeftLong} className={styles.btnBack} />
           {/* <button className={styles.btnBack}>patras</button> */}
         </Link>
-        <h1 className={styles.TilteStylePage}>¡Añade tu nuevo producto!</h1><br></br>
+        <h1 className={styles.TilteStylePage}>¡Añade tu nuevo producto!</h1>
         <p className={styles.descriptionStylePage}>Completa todos los campos</p>
+        <p className={styles.starsTitle}>Las estrellas son la puntuación de tu producto</p>
+        <div className={styles.starsStyle}>
+          <Stars stars={stars} />
+        </div>
+
       </section>
 
       <div>
-<br></br>
         <form>
           <section className={styles.container}>
             {campos.map((item, index) => (
               <div className={styles.containerAllItems} key={index}>
                 <div className={item.nombre}>
-                  <h2 className={styles.TitleStyle}>{item.mostrar}</h2>
+                  <h2 className={styles.TitleStyle}>{item.mostrar}
+                  {
+                  item.obligatorio ? 
+                  datos[item.nombre] ? <></> : 
+                  <label className={styles.labelStyle}> (Debe llenar este campo)</label> : 
+                  <></>
+                 }
+                  </h2>
 
                   {item.tipo === "input" ? (
                     <input
@@ -228,58 +284,27 @@ const NewProduct = () => {
                   ) : (
                     <></>
                   )}
-                 {
-                  item.obligatorio ? 
-                  datos[item.nombre] ? <></> : 
-                  <label style={{color: "red"}}>Debe llenar este campo </label> : 
-                  <></>
-                 }
                 </div>
               </div>
             ))}
           </section>
         </form>
-        <Stars stars={stars} style={{ left: "80%" }} />
+        {/* <Stars stars={stars} style={{ left: "80%" }} /> */}
 
         <button
           type="button"
-          onClick={() => {
-            let isValid = true;
-            let error = "";
-            for (let i = 0; i < Object.keys(datos).length; i++) {
-              let element = Object.keys(datos)[i];
-              let isRequired = campos.find((x) => x.nombre === element);
-              if (isRequired.obligatorio) {
-                if (!datos[element]) {
-                  isValid = false;
-                  error = element;
-                  break;
-                }
-              }
-            }
-
-            if (isValid) {
-              setGrupoProductos([
-                ...grupoProductos,
-                {
-                  ...datos,
-                  id: grupoProductos.length + 1,
-                  stars: stars,
-                },
-              ]);
-              setDatos(valorInicial);
-              setStars(0);
-            }else{
-              alert('El campo ' + error + " es obligatorio");
-            }
-          }}
+          onClick={() => handleSendProduct()}
           className={styles.btnAddProduct}
+        >Cargar productos
+        </button>
+        <button
+          type="button"
+          onClick={() => handleSendProduct()}
+          className={styles.btnAddTable}
         >
-          Cargar
+          Productos ingresados
         </button>
       </div>
-
-      <TableProduct data={grupoProductos} />
     </main>
   );
 };

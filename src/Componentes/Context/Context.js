@@ -1,3 +1,25 @@
+import React,{ useState } from "react"; 
+
+const DatosContext = React.createContext({});
+const ContextProvider = ({ children }) => {
+
+    const [grupoProductos, setGrupoProductos] = useState([]);
+
+    const agregarProducto = (productoCapturado)=> {
+        setGrupoProductos([...grupoProductos, productoCapturado])
+    }
+const data = {
+    agregar: agregarProducto, 
+    grupo: grupoProductos
+}
+
+    return <DatosContext.Provider value={data}>{children}</DatosContext.Provider>;
+
+}
+
+export {DatosContext, ContextProvider}
+
+
 /*const enviarDatos = (event) =>{
     event.preventDefault();
     const inpVal= {

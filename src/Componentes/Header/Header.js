@@ -7,19 +7,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Header = () => {
   return (
-    <div>
-      <div></div>
-        <header className={header.backgroundColor}>
-          <div className={header.containerRipleyAndUser}>
-          <img src={ripleytech} alt='logoripley' className={header.logoripleytech} />
+      <header className={header.backgroundColor}>
+        <div className={header.containerRipleyAndUser}>
+            <img src={ripleytech} alt='logoripley' className={header.logoripleytech} />
             <h1 className={header.textStyle}>RipleyTECH_</h1>
             <h3 className={header.textStyleUser}>USUARIO</h3>
             <Link to='/'>
               <FontAwesomeIcon icon={faArrowRightFromBracket} className={header.iconStyle}/>
             </Link>
           </div>
-        </header>
-    </div>
+      </header>
   )
 }
 

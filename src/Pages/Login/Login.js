@@ -10,7 +10,9 @@ const Login = () => {
 		
 		<main>
 			<div className={styles.containerImageandForm}>
-			<img src={Bienvenido} alt='bienvenido' className={styles.Bienvenido}/>
+			<div className={styles.containerimg}>
+                <img src={Bienvenido} alt='logoripley' className={styles.Bienvenido} />
+            </div>
 			<div className={styles.container}>
 				<section className={styles.containerFormLogin}>
 					<img src={ripleytech} alt='logoripley' className={styles.logoripleytech} />
